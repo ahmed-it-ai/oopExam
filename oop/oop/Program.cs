@@ -10,16 +10,27 @@ namespace oop
     {
         static void Main(string[] args)
         {
-            bankAcount ahmed = new bankAcount();
-            ahmed.setAcountData();
+          
+            bankAcount salma = new bankAcount("QNB","CAIRO","EG124674",5000);
             while (true)
-            {                
-                ahmed.GetAcountData();
+            {
+                salma.GetAcountData();
                 Console.WriteLine("inter your Deposit :");
-                ahmed.Deposit(int.Parse(Console.ReadLine()));
+                salma.Deposit(int.Parse(Console.ReadLine()));
                 Console.WriteLine("inter your  :");
-                ahmed.Withdraw(int.Parse(Console.ReadLine()));
+                salma.Withdraw(int.Parse(Console.ReadLine()));
             }
+            //bankAcount ahmed = new bankAcount();
+            //ahmed.setAcountData();
+            //while (true)
+            //{                
+            //    ahmed.GetAcountData();
+            //    Console.WriteLine("inter your Deposit :");
+            //    ahmed.Deposit(int.Parse(Console.ReadLine()));
+            //    Console.WriteLine("inter your  :");
+            //    ahmed.Withdraw(int.Parse(Console.ReadLine()));
+            //}
+
         }
     }
     

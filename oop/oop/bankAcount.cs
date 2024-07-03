@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace oop
 {
+   
     class bankAcount
     {
 
@@ -13,6 +14,21 @@ namespace oop
         public string BranchName { get; set; }
         public string AcountNumber { get; set; }
         public int Balance { get; set; }
+        public bankAcount()
+        {
+            
+            Console.WriteLine("Constructors");
+        }
+        public bankAcount(string bankName, string branchName, string acountNumber, int balance)
+        {
+            // to set All parametars from Constructor
+            BankName = bankName;
+            BranchName = branchName;
+            AcountNumber = acountNumber;
+            Balance = balance;
+        }
+
+
 
         public void Withdraw(int amount)
         {
