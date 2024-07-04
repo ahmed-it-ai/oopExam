@@ -27,9 +27,6 @@ namespace oop
             AcountNumber = acountNumber;
             Balance = balance;
         }
-
-
-
         public void Withdraw(int amount)
         {
             int newBalance = Balance - amount;
@@ -71,6 +68,35 @@ namespace oop
             Console.Write("inter your Balance:");
             Balance = int.Parse(Console.ReadLine());
         }
+        public static void StaticMethod()
+        {
+            Console.WriteLine("this is a Static Method ");
+        }
+        public static int Factorial(int n)
+        {
+            if (n == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return n * (Factorial(n-1));
+            }
+        }
+
+    }
+    static class ExtensionClass
+    {
+        public static int cunter(this string text)
+        {
+            int xx = 0;
+            foreach(char x in text)
+            {
+                xx++;
+            }
+            return xx;
+        }
+       
 
     }
 
