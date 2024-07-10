@@ -11,6 +11,17 @@ namespace oop
         static void Main(string[] args)
         {
 
+            // testing About Extension methods to sorting list of numbers
+            int[] x = {6,8,7,9,1,1,2,0,1,2,0};
+            x.print();
+            x.sorting();
+            x.print();
+            Console.ReadLine();
+
+
+
+
+
             //free code
             //int s = 1;
             //int n = 10;
@@ -19,9 +30,10 @@ namespace oop
             //    s = s * x;
             //    Console.WriteLine($"x={x}  S={s}");
             //}
-            int x = 10;
-            Console.WriteLine(bankAcount.Factorial(x));
-            Console.ReadLine();
+
+            //int x = 10;
+            //Console.WriteLine(bankAcount.Factorial(x));
+            //Console.ReadLine();
 
 
             //bankAcount salma = new bankAcount("QNB","CAIRO","EG124674",5000);
@@ -49,7 +61,38 @@ namespace oop
 
         }
     }
-    
+    static class Ext
+    {
+        public static int[] sorting(this int[] inpot)
+        {
+            
+            for (int i = 0; i < inpot.Length; i++)
+            {
+                for (int x = 0; x < inpot.Length-1; x++)
+                {
+                    if (inpot[x] > inpot[x + 1])
+                    {
+                        int xx = inpot[x];
+                        inpot[x] = inpot[x + 1];
+                        inpot[x + 1] = xx;
+                    }
+
+                }
+            }
+
+
+            return inpot;
+        }
+        public static void print(this int[] inpot )
+        {
+            Console.Write("(");
+            for (int i = 0; i < inpot.Length; i++)
+            {
+                Console.Write(inpot[i]);
+            }
+            Console.WriteLine(")");
+        }
+    }
 
 
 }
